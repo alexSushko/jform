@@ -137,6 +137,41 @@
           }
         }
       }
+    },
+    "jform-lib": {
+      "projectType": "library",
+      "root": "projects/jform-lib",
+      "sourceRoot": "projects/jform-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/jform-lib/tsconfig.lib.json",
+            "project": "projects/jform-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/jform-lib/src/test.ts",
+            "tsConfig": "projects/jform-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/jform-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/jform-lib/tsconfig.lib.json",
+              "projects/jform-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "jform"
 }

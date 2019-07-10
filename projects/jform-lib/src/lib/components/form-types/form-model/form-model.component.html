@@ -1,0 +1,17 @@
+<div class="form-wrapper">
+  <div class="form">
+    <div class="form-element-wrapper" *ngFor="let control of fcontrol.Controls">
+      <div class="form-element" [ngSwitch]="control.formType">
+        <div *ngSwitchCase="formTypes.formModel">
+          <app-form-model [fcontrol]="control" [editing]="editing"></app-form-model>
+        </div>
+        <div *ngSwitchCase="formTypes.formArray">
+          <app-form-array [fcontrol]="control" [editing]="editing"></app-form-array>
+        </div>
+        <div *ngSwitchCase="formTypes.formControl">
+          <app-form-control [fcontrol]="control" [editing]="editing"></app-form-control>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

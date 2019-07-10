@@ -1,0 +1,4 @@
+<div>
+    <button type="button" *ngIf="editMode" (click)="editing=!editing">Edit</button>
+    <app-form-model [fcontrol]="form" [editing]="editing"></app-form-model>
+</div>
