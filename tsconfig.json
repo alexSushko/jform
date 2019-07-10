@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "jform-lib": [
+        "dist/jform-lib"
+      ],
+      "jform-lib/*": [
+        "dist/jform-lib/*"
+      ]
+    }
   }
 }

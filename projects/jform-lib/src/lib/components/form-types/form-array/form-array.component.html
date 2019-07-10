@@ -1,0 +1,7 @@
+<div>
+  <div *ngFor="let fc of fcontrol.fcontrolModels; let i = index">
+    <app-form-model [fcontrol]="fc"></app-form-model>
+    <button (click)="fcontrol.removeForm(i)">Remove this one</button>
+  </div>
+  <button (click)="fcontrol.addForm()">Add new one</button>
+</div>
